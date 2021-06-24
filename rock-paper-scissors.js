@@ -38,27 +38,37 @@ function singleRound(playerSelection, computerSelection){
            }
         }
     else{
-        return "not a valid input";
+        switch(computerSelection){
+            case "rock":
+                return "You Lose! Rock beats Scissors!";
+            case "paper":
+                return "You win! Scissors beats Paper";
+            case "scissors":
+                return "You tie!";  
+           }
     }
     
 }
 function game(){
-    for(let i = 0; i< 5;i++){
-        let player_choice = window.prompt("Please enter a hand").toLowerCase();
-        let computer_choice = computerPlay();
-        
-        if (player_choice == "rock" || 
-        player_choice == "paper" ||
-        player_choice == "scissors"){
-            console.log("Your hand is " + player_choice);
-            console.log("The computer's hand is " + computer_choice);
-            console.log(singleRound(player_choice,computer_choice));
-        }
-        else{
-            console.log("Not a valid input");
-        }
-        
-    }
+        let player_choice;
+        const buttons = document.querySelectorAll('button');
+        const results = document.querySelector('#results');
+        const display_player = document.querySelector('#player-choice');
+        const display_computer = document.querySelector('#computer-choice');
+        buttons.forEach((button) => {
+            
+            button.addEventListener('click', () =>{
+                let computer_choice = computerPlay();
+                player_choice = button.id;
+                display_player.textContent = `Your choice: ${player_choice}`;
+                display_computer.textContent = `Computer choice: ${computer_choice}`;
+                results.textContent = singleRound(player_choice, 
+                    computer_choice);
+
+            });
+            
+        });  
 }
+        
 game();
 
