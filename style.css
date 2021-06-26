@@ -1,0 +1,35 @@
+html,body{
+    height:110%;
+    overflow:hidden;
+}
+header{
+    text-align: center;
+    font-size:30px;
+}
+img{
+    width:25%;
+    height:auto;
+    border: 2px solid black;
+}
+img:hover{
+    transform: scale(1.2);
+}
+
+#buttons-container{
+display:flex;
+margin:10px;
+justify-content: space-evenly;
+
+}
+#results-container{
+    margin:40px;
+}
+div p{
+    text-align: center;
+    padding:10px;
+    font-size:20px;
+}
+#results{
+    font-weight:bold;
+    
+}

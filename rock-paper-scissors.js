@@ -51,7 +51,7 @@ function singleRound(playerSelection, computerSelection){
 }
 function game(){
         let player_choice;
-        const buttons = document.querySelectorAll('button');
+        const buttons = document.querySelectorAll('img');
         const results = document.querySelector('#results');
         const display_player = document.querySelector('#player-choice');
         const display_computer = document.querySelector('#computer-choice');
@@ -61,7 +61,7 @@ function game(){
                 let computer_choice = computerPlay();
                 player_choice = button.id;
                 display_player.textContent = `Your choice: ${player_choice}`;
-                display_computer.textContent = `Computer choice: ${computer_choice}`;
+                display_computer.textContent = `Computer's choice: ${computer_choice}`;
                 results.textContent = singleRound(player_choice, 
                     computer_choice);
 
