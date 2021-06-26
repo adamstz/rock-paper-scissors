@@ -6,8 +6,11 @@ header{
     text-align: center;
     font-size:30px;
 }
+#intro{
+    margin:40px;
+}
 img{
-    width:25%;
+    width:15%;
     height:auto;
     border: 2px solid black;
 }
@@ -31,5 +34,10 @@ div p{
 }
 #results{
     font-weight:bold;
+    
+}
+#scores-container{
+    display:flex;
+    justify-content: center;
     
 }
